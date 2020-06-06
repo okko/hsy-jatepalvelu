@@ -6,13 +6,13 @@ Scrape info from HSY Jätepalvelu. Hae tiedot HSY:n jätepalvelusta käyttäen j
 - Node
 
 # Installation
-yarn install
+`yarn install`
 
 # Local run
-HTML_SOURCE_TUNNUS=BBxx-xxxxxx-x HTML_SOURCE_POSTINUMERO=00xx0 yarn start
+`HTML_SOURCE_TUNNUS=BBxx-xxxxxx-x HTML_SOURCE_POSTINUMERO=00xx0 yarn start`
 
 # Deployment
-HTML_SOURCE_TUNNUS=BBxx-xxxxxx-x HTML_SOURCE_POSTINUMERO=00xx0 yarn deploy:prod --verbose
+`HTML_SOURCE_TUNNUS=BBxx-xxxxxx-x HTML_SOURCE_POSTINUMERO=00xx0 yarn deploy:prod --verbose`
 
 # Käyttääkö tämä HSY:n rajapintaa (APIa) tietojen hakemiseen?
 
