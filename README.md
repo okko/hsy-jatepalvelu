@@ -16,7 +16,7 @@ Scrape info from HSY Jätepalvelu. Hae tiedot HSY:n jätepalvelusta käyttäen j
 
 # Käyttääkö tämä HSY:n rajapintaa (APIa) tietojen hakemiseen?
 
-Ei. Osoitteessa on https://lukemat.hsy.fi/raportti-rajapinta.html, mutta sen käyttö on hankalaa. Tietojen haku pitää ensin käynnistää ja sitten pollata valmistumista. Tämä haalii siksi tiedot web-käyttöliittymästä, josta ne saa yhdellä haulla.
+Ei. Osoitteessa https://lukemat.hsy.fi/raportti-rajapinta.html on määritelty rajapinta, mutta sen käyttö on hankalaa. Tietojen haku pitää ensin käynnistää ja sitten pollata valmistumista. Tämä haalii siksi tiedot web-käyttöliittymästä, josta ne saa yhdellä haulla.
 
 # Mikä tuo HTML_SOURCE_TUNNUS on?
 
