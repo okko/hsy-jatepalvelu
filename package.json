@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "sls invoke local --function default",
+    "deploy:dev": "sls deploy --aws-profile isolokki",
+    "deploy:prod": "sls deploy --aws-profile isolokki --stage prod"
+  },
+  "dependencies": {
+    "cheerio": "1.0.0-rc.3",
+    "got": "11.3.0"
+  }
+}

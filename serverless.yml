@@ -1,0 +1,28 @@
+service: hsy-jatepalvelu
+
+provider:
+  name: aws
+  stage: ${opt:stage, 'dev'}
+  runtime: nodejs12.x
+  logRetentionInDays: ${self:custom.logRetentionInDays.${self:provider.stage}}
+  region: eu-central-1
+  environment:
+    # API_SOURCE_URL: 'https://raportit.hsy.fi:8443/report/rest/reporting/waste/list/MOCK-LIST-ID/YEARLY/fi'
+    # API_KEY: 'HSYTEST51_9NOOzOv77pD4Mhx2Kgol86NFSdl9rpOPGNzlQ0A7'
+    HTML_SOURCE_URL: 'https://www.ytvlogistiikka.net/Logica.Ytv.Logistics.Subscription.WebUpdate/fi/Palvelutilaus.aspx/DoLogin/2'
+    HTML_SOURCE_TUNNUS: ${env:HTML_SOURCE_TUNNUS}
+    HTML_SOURCE_POSTINUMERO: ${env:HTML_SOURCE_POSTINUMERO}
+
+functions:
+  default:
+    handler: handler.scrape
+    events:
+      - http:
+          path: scrape
+          method: get
+          cors: true
+
+custom:
+  logRetentionInDays:
+    prod: 30
+    dev: 1
